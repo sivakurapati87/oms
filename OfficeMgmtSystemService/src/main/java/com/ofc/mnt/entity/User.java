@@ -1,5 +1,7 @@
 package com.ofc.mnt.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -12,6 +14,7 @@ public class User extends BaseEntity {
 	private String password;
 	private Boolean isAdmin = false;
 	private String assignedTo;
+	private Date effectiveFrom;
 
 	public String getFirstName() {
 		return firstName;
@@ -59,6 +62,14 @@ public class User extends BaseEntity {
 
 	public void setAssignedTo(String assignedTo) {
 		this.assignedTo = assignedTo;
+	}
+
+	public Date getEffectiveFrom() {
+		return effectiveFrom;
+	}
+
+	public void setEffectiveFrom(Date effectiveFrom) {
+		this.effectiveFrom = effectiveFrom;
 	}
 
 }
