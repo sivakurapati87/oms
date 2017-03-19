@@ -1,0 +1,83 @@
+<form ng-submit="saveOrUpdateAction()">
+	<div class="container-fluid" style="background: white; width: 100%;">
+		<div class="row">
+			<div class="col-md-12 lblHeader">
+				<label>Create User</label>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-3 lblfont16px">
+				<label>User Name :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" required="required"
+					ng-model="userObj.userName">
+			</div>
+			<div class="col-md-3 lblfont16px">
+				<label>First Name :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" required="required"
+					ng-model="userObj.firstName">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-3 lblfont16px">
+				<label>Last Name :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" required="required"
+					ng-model="userObj.lastName">
+			</div>
+			<div class="col-md-3 lblfont16px">
+				<label>Effective From:</label>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control"
+					ng-model="userObj.effectiveFrom" id="effectiveFromId"
+					datepicker-popup="dd-MM-yyyy" is-open="Opened"
+					ng-focus="Opened=true" ng-click="Opened=true">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-3 lblfont16px">
+				<label>Password :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="password" class="form-control" required="required"
+					ng-model="userObj.password">
+			</div>
+			<div class="col-md-3 lblfont16px">
+				<label>Confirm Password :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="password" class="form-control" required="required"
+					ng-model="userObj.confirmPwd">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-3 lblfont16px">
+				<label>Is Admin :</label>
+			</div>
+			<div class="col-md-3">
+				<input type="checkbox" ng-model="userObj.isAdmin">
+			</div>
+			<div class="col-md-3 lblfont16px"></div>
+			<div class="col-md-3"></div>
+		</div>
+		<br> <br>
+		<div class="row">
+			<div class="col-md-6">
+				<button type="submit" class="btn btn-success btnInfo align_right">SUBMIT</button>
+			</div>
+			<div class="col-md-6">
+				<button type="button" class="btn btn-warning btnInfo">CLEAR</button>
+			</div>
+		</div>
+
+	</div>
+</form>

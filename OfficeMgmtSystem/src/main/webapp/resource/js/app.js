@@ -91,15 +91,33 @@ var App = angular.module('myApp',['ui.router','ui.bootstrap',"angucomplete-alt",
 
 App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	
-	$urlRouterProvider.otherwise("/")
+	$urlRouterProvider.otherwise("/create_task")
 	
 	$stateProvider
-	.state('home', {
-		url: "/",
+	.state('create_task', {
+		url: "/create_task",
 			views: {
 	            'content': {
-	            	templateUrl: 'views/home.html',
-	        		controller : "HomeController"
+	            	templateUrl: 'views/create_task.html',
+	        		controller : "AssignTaskController"
+	            }
+	        }
+	})
+	.state('tasks', {
+		url: "/tasks",
+			views: {
+	            'content': {
+	            	templateUrl: 'views/tasks.html',
+	        		controller : "TaskController"
+	            }
+	        }
+	})
+	.state('create_user', {
+		url: "/create_user",
+			views: {
+	            'content': {
+	            	templateUrl: 'views/create_user.html',
+	        		controller : "CreateUserController"
 	            }
 	        }
 	})
