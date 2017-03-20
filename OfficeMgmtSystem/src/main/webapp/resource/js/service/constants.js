@@ -1,9 +1,8 @@
 var constants = {
 
-	localhost_port : 'http://localhost:8080',
+	localhost_port : 'http://localhost:8080/',
 	// contexts
-	web_context : 'QuickMedWeb',
-	service_context : 'QuickMedService',
+	service_context : 'OfficeMgmtSystemService',
 	records_per_page :25,
 
 	// constants

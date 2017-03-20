@@ -16,6 +16,7 @@ public class Task extends BaseEntity {
 	private User assignedTo;
 	private Date dueDate;
 	private String status;
+	private String taskName;
 
 	public Integer getAssignedToId() {
 		return assignedToId;
@@ -47,6 +48,14 @@ public class Task extends BaseEntity {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
 	}
 
 }

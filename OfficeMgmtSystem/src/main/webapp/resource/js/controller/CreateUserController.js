@@ -7,10 +7,12 @@ App.controller('CreateUserController', ['$scope','$http','$rootScope','$state', 
 	
 	$scope.userObj = {};
 	
+	
+	
+	
 	$scope.saveOrUpdateAction = function(){
 		$scope.userObj.effectiveFrom = $('#effectiveFromId').val();
-		alert(JSON.stringify($scope.userObj));
-		var response = $http.post("/OfficeMgmtSystemService/UserController/saveOrUpdateUser",$scope.userObj);
+		var response = $http.post(constants.localhost_port+constants.service_context+"/UserController/saveOrUpdateUser",$scope.userObj);
 		response.success(function(data) {
 			
 			alert(data);
@@ -22,7 +24,7 @@ App.controller('CreateUserController', ['$scope','$http','$rootScope','$state', 
 	}
 	
 	
-      
+	
      /* $scope.obj={};
       
       $scope.init = function(){

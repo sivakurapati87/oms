@@ -14,6 +14,12 @@ App.controller('TaskController', ['$scope','$http','$rootScope','$state', functi
 	{taskName:'design a website',assignedTo:'siva',dueDate:'10-04-2017',status:'Pending',description:'Do this task before 4th of April'}];
 	
 	
+	
+	
+	$scope.closeModal = function(){
+	    $('#transactionPopupId').modal('hide');
+	}
+	
      /* $scope.obj={};
       
       $scope.init = function(){

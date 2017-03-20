@@ -1,5 +1,7 @@
 package com.ofc.mnt.service;
 
-public interface TaskService {
+import com.ofc.mnt.json.TaskJson;
 
+public interface TaskService {
+	public void saveOrUpdate(TaskJson taskJson);
 }

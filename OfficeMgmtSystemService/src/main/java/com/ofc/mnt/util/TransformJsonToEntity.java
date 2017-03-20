@@ -2,7 +2,9 @@ package com.ofc.mnt.util;
 
 import java.util.Date;
 
+import com.ofc.mnt.entity.Task;
 import com.ofc.mnt.entity.User;
+import com.ofc.mnt.json.TaskJson;
 import com.ofc.mnt.json.UserJson;
 
 public class TransformJsonToEntity {
@@ -20,6 +22,20 @@ public class TransformJsonToEntity {
 		} else {
 			user.setCreatedBy(userJson.getCreatedBy());
 			user.setCreatedOn(new Date());
+		}
+	}
+
+	public static void getTask(TaskJson taskJson, Task task) {
+		task.setAssignedToId(taskJson.getAssignedToId());
+		task.setDueDate(Util.convertDiffferentFormatString(taskJson.getDueDate()));
+		task.setStatus(taskJson.getStatus());
+		task.setTaskName(taskJson.getTaskName());
+		if (task.getId() != null) {
+			task.setUpdatedBy(taskJson.getUpdatedBy());
+			task.setUpdatedOn(new Date());
+		} else {
+			task.setCreatedBy(taskJson.getCreatedBy());
+			task.setCreatedOn(new Date());
 		}
 	}
 }

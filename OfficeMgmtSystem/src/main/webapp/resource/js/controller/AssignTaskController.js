@@ -13,15 +13,31 @@ App.controller('AssignTaskController', ['$scope','$http','$rootScope','$state', 
 	
 	
 	  //This function is to get the selected value from auto population
-    $scope.selectedCustomerIdAction = function(selected) {
-    	alert(JSON.stringify(selected));
-        if (selected && selected.title) {
+    $scope.selectedUserNameAction = function(selected) {
+        if (selected) {
 //      	  $rootScope.transactionData.customerId = selected.title;
 //      	  $scope.getCustomerInfoById();
+        	alert(selected.originalObject.id);
+        	$scope.taskObj.assignedToId = selected.originalObject.id;
         } else {
           console.log('cleared');
         }
       };
+
+      
+      $scope.getAllUsers = function(){
+  		var response = $http.get(constants.localhost_port+constants.service_context+"/UserController/getAllUsers");
+  		response.success(function(data) {
+  			
+  			$scope.userList = data;
+  		});
+  		response.error(function() {
+        	  console.error('Could not Perform well');
+          });
+  	}
+  	
+  	
+  	$scope.getAllUsers();
       
      /* $scope.obj={};
       

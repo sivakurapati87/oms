@@ -39,9 +39,12 @@
 				</div>
 				<div class="col-md-6 lblHeader_value_new">{{task.taskName}}</div>
 				<div class="col-md-3">
-					<button type="button" id="transactionPopup"
+					<!-- <button type="button" id="transactionPopup"
 						class="btn btn-info btn-lg" data-toggle="modal"
-						data-target="#transactionPopupId">Write Doubt !!</button>
+						data-target="#transactionPopupId">Write Doubt !!</button> -->
+						<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="modal"
+						style="font-size: 20px;padding-top: 12px;color: yellow;cursor: pointer;" title="Write Doubt"
+						data-target="#transactionPopupId"></i>
 				</div>
 			</div>
 			<div class="row">
@@ -103,7 +106,7 @@
 					<br>
 					<div class="row">
 						<div class="col-md-12">
-						<button class="btn btn-success">Ok</button>
+						<button class="btn btn-success" ng-click="closeModal()">Ok</button>
 						</div>
 					</div>
 				</div>
